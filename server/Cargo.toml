@@ -6,3 +6,25 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+# Backend framework
+axum = { version = "0.6.18", features = ["headers", "macros"] }
+
+# CLI sturtup arguments
+clap = { version = "4.5.4", features = ["derive"] }
+
+# Console logging
+log = "0.4.21"
+
+# TLS support
+rustls = "0.21.7"
+axum-server = { version = "0.5.1", features = ["tls-rustls"] }
+
+# Async runtime
+tokio = { version = "1.37.0", features = ["rt-multi-thread", "macros"] }
+
+# Middleware
+tower-http = { version = "0.4.3", features = ["full"] }
+tower = { version = "0.4.13" }
+
+# Allowes to log
+tracing-subscriber = "0.3.18"
