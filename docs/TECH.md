@@ -1,0 +1,1 @@
+This file is created for the project's technical assistance.
