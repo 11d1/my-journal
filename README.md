@@ -1,4 +1,23 @@
 ##### Hi! My name is Alex.
-Currently, I'm learning more about the Axum and Yew Rust frameworks. And I thought it would be great to make a project. The project is about time management, journaling, setting goals, and making self-reviews.
 
-Feel free to help, or fork ^^
+Pinto Diary is my pet project.
+* creating date: May 22, 2024
+* version: 0.1.0
+___
+
+
+##### Technical information:
+
+###### Backend (Axum)
+ 
+_(will be added soon)_
+
+###### Frontend (Yew)
+
+_(will be added soon)_
+
+___
+
+##### To work on the project you need to install:
+
+_(will be added soon)_

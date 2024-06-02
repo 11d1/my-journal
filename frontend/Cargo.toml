@@ -5,4 +5,55 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[profile.release]
+# less code to include into binary
+panic = 'abort'
+# optimization over all codebase ( better optimization, slower build )
+codegen-units = 1
+# optimization for size ( more aggressive )
+opt-level = 'z'
+# optimization for size
+# opt-level = 's'
+# link time optimization using using whole-program analysis
+lto = true
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.0"
+
 [dependencies]
+
+shared = { path = "../shared" }
+
+# serialize/deserialize
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# frontend framework
+yew = { version = "0.21.0", features = ["csr"] }
+yewdux = "0.10"
+
+yew-router = "0.18"
+yew-template = "0.10.0"
+
+# Icons
+yew_icons = { version = "0.7.3", features = ["bootstrap"] }
+
+# browser logs
+gloo = { version = "0.10.0" }
+
+# need wasm-bindgen for JsCast
+wasm-bindgen = "0.2.90"
+wasm-bindgen-futures = "0.4.40"
+web-sys = { version = "0.3.67", features = ["HtmlInputElement"] }
+
+# email validation
+regex = "1.10.2"
+
+# Enum Iterator
+strum = { version = "0.26.1", features = ["derive"] }
+
+# i18n - Allows to manage translations and switch between different languages
+yew-i18n = "0.1.2"
+
+
+# stylist = { version = "0.13.0", features = ["yew", "parser"] }

@@ -28,3 +28,9 @@ tower = { version = "0.4.13" }
 
 # Allowes to log
 tracing-subscriber = "0.3.18"
+
+# serialize/deserialize
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+axum-test = "13.4.1"

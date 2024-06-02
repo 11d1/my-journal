@@ -1,0 +1,1 @@
+This folder is considered as the project's technical assistance.

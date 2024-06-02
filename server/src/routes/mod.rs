@@ -1,12 +1,11 @@
 use axum::{routing::get, Router};
 
+mod home;
+
+use home::home;
 
 pub async fn routes() -> Router {
 
     Router::new()
-        .route("/", get(hello))
-}
-
-pub async fn hello() -> String {
-    "Init".to_owned()
+        .route("/", get(home))
 }

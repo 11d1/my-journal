@@ -1,22 +1,30 @@
+use std::net::IpAddr;
+
 use clap::Parser;
+
+
 
 #[derive(Parser, Debug, Clone)]
 pub struct Opt {
+
     /// Set logging level Y/n
-    #[clap(short = 'l', long = "log", default_value="yes")]
+    #[clap(long = "log", default_value = "Yes")]
     pub log_level: String,
 
     /// IP address
-    #[clap(short = 'a', long = "addr", default_value="0.0.0.0")]
-    pub addr: String,
+    #[clap(long = "addr", default_value = "0.0.0.0")]
+    pub addr: IpAddr,
 
     /// Port
-    #[clap(short = 'p', long = "port", default_value="3000")]
-    pub port: String,
+    #[clap(long = "port", default_value = "3000")]
+    pub port: u16,
+    
+    /// (Optional) Path for the Cert.pem
+    #[clap(long = "cert_path", default_value =  "../cert.pem")]
+    pub pem_cert_path: String,
 
-    #[clap(long = "cert", default_value="../cert.pem")]
-    pub pem_cert: String,
+    /// (Optional) Path for the Key.pem
+    #[clap(long = "key_path", default_value = "../key.pem")]
+    pub pem_key_path: String,
 
-    #[clap(long = "key", default_value="../key.pem")]
-    pub pem_key: String,
 }
